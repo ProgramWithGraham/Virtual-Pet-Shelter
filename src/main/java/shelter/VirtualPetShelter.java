@@ -1,13 +1,18 @@
 package shelter;
 
-import java.util.Collections;
-import java.util.ArrayList;
+import java.util.*;
 
 public class VirtualPetShelter {
 
     ArrayList<VirtualPet> pets = new ArrayList<VirtualPet>();
 
+    // public VirtualPetShelter(String petName, String petDescription, int
+    // hungerLevel, int thirstLevel,
+    // int boredomLevel) {
+    // super(petName, petDescription, hungerLevel, thirstLevel, boredomLevel);
+    // }
     public VirtualPetShelter() {
+
     }
 
     public ArrayList<VirtualPet> getPets() {
@@ -22,8 +27,23 @@ public class VirtualPetShelter {
         this.pets.add(addedPets);
     }
 
+    public void findPet() {
+        for (VirtualPet pet : pets) {
+            System.out.println(pet.getPetName());
+        }
+    }
+
+    // public void feedALL() {
+    // VirtualPet hungr
+    // this.hungerLevel -= 10;
+    // }
+
+    // public void giveAllWater() {
+    // this.thirstLevel -= 10;
+    // }
+
     public void showPets() {
-        System.out.println("Name    | Description   | Hunger | Thirst | Boredom |");
+        System.out.println("Name     | Description     | Hunger | Thirst | Boredom |");
         for (VirtualPet pet : pets) {
             System.out.println(pet.getPetName() + " | " + pet.getPetDescription() + "   | " + pet.getHungerLevel()
                     + "    | " + pet.getThirstLevel() + "     |  " + pet.getBoredomLevel() + " |");
