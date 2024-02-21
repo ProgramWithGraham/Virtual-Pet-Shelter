@@ -16,12 +16,12 @@ public class VirtualPetShelterApp {
         Scanner pet = new Scanner(System.in);
         System.out.println(
                 "\n Welcome to the grand ole world of Virtual Pet. Your goal is to keep your pet satisfied with Food, Water and Play. The higher the number the better your pet is doing. \n");
-        VirtualPet superPet = new VirtualPet("Krypto  ", "The Super dog");
-        VirtualPet superPet2 = new VirtualPet("Tommy   ", "Green Power dog");
-        VirtualPet superPet3 = new VirtualPet("Billy   ", "Blue Power dog");
+        VirtualPet superPet = new VirtualPet("Krypto", "The Super dog");
+        VirtualPet superPet2 = new VirtualPet("Tommy", "Green Power dog");
+        VirtualPet superPet3 = new VirtualPet("Billy", "Blue Power dog");
         VirtualPet superPet4 = new VirtualPet("Kimberly", "Pink Power dog");
-        VirtualPet superPet5 = new VirtualPet("Jason   ", "Red Power dog");
-        VirtualPet superPet6 = new VirtualPet("Trini   ", "Yellow Power dog");
+        VirtualPet superPet5 = new VirtualPet("Jason", "Red Power dog");
+        VirtualPet superPet6 = new VirtualPet("Trini", "Yellow Power dog");
 
         VirtualPetShelter omgPets = new VirtualPetShelter();
         omgPets.addPets(superPet); // possibly nested if

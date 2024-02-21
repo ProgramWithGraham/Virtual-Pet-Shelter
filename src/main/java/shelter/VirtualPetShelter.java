@@ -61,13 +61,13 @@ public class VirtualPetShelter {
     }
 
     public void playWithSelectedPet(String petName) {
-        pets.get(petName).playFetch();
         int counter = 0;
         while (counter < pets.size()) {
-            VirtualPet selectedPet = pets.get(0);
+            VirtualPet selectedPet = pets.get(counter);
             String thisSelectedPet = selectedPet.getPetName();
-            if (selectedPet.equals(petName))
-                pets.playFetch();
+            if (thisSelectedPet.equals(petName))
+                selectedPet.playFetch();
+            counter++;
         }
     }
 
