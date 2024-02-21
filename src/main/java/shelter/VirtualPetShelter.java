@@ -29,7 +29,19 @@ public class VirtualPetShelter {
 
     public void findPet() {
         for (VirtualPet pet : pets) {
-            System.out.println(pet.getPetName() + pet.getPetDescription());
+            System.out.println(pet.getPetName() + " " + pet.getPetDescription());
+        }
+    }
+
+    public void removePet(String petToRemove) {
+        int counter = 0;
+        while (counter < pets.size()) {
+            VirtualPet petAtThisIndex = pets.get(counter);
+            String thisPet = petAtThisIndex.getPetName();
+            if (thisPet.equals(petToRemove)) {
+                pets.remove(counter);
+            }
+            counter++;
         }
     }
 
@@ -43,9 +55,14 @@ public class VirtualPetShelter {
             pet.giveWater();
     }
 
-    public void playWithAPet(String petName) {
-        for (VirtualPet pet : pets)
-            pet.playFetch();
+    public void playWithSelectedPet(String petName) {
+        int counter = 0;
+        while (counter < pets.size()) {
+            VirtualPet selectedPet = pets.get(0);
+            String thisSelectedPet = selectedPet.getPetName();
+            if (selectedPet.equals(petName))
+                pets.playFetch();
+        }
     }
 
     public void tickAllPets() {
@@ -54,10 +71,10 @@ public class VirtualPetShelter {
     }
 
     public void showPets() {
-        System.out.println("Name\t|Hunger\t|Thirst\t|Boredom");
+        System.out.println("Name\t | Description         | Hunger    | Thirst | Boredom ");
         for (VirtualPet pet : pets) {
-            System.out.println(pet.getPetName() + " | " + pet.getPetDescription() + "   | " + pet.getHungerLevel()
-                    + "    | " + pet.getThirstLevel() + "     |  " + pet.getBoredomLevel() + " |");
+            System.out.println(pet.getPetName() + " |\t" + pet.getPetDescription() + "  |\t" + pet.getHungerLevel()
+                    + " |\t" + pet.getThirstLevel() + "  |\t" + pet.getBoredomLevel());
         }
         // allows the user to house and care for a collection of pets.
         /*
