@@ -15,6 +15,10 @@ public class VirtualPetShelter {
 
     }
 
+    public Collection<VirtualPet> getAllPets() {
+        return pets;
+    }
+
     public ArrayList<VirtualPet> getPets() {
         return this.pets;
     }
@@ -40,6 +44,7 @@ public class VirtualPetShelter {
             String thisPet = petAtThisIndex.getPetName();
             if (thisPet.equals(petToRemove)) {
                 pets.remove(counter);
+                counter--;
             }
             counter++;
         }
@@ -58,10 +63,11 @@ public class VirtualPetShelter {
     public void playWithSelectedPet(String petName) {
         int counter = 0;
         while (counter < pets.size()) {
-            VirtualPet selectedPet = pets.get(0);
+            VirtualPet selectedPet = pets.get(counter);
             String thisSelectedPet = selectedPet.getPetName();
-            if (selectedPet.equals(petName))
-                pets.playFetch();
+            if (thisSelectedPet.equals(petName))
+                selectedPet.playFetch();
+            counter++;
         }
     }
 
@@ -76,6 +82,7 @@ public class VirtualPetShelter {
             System.out.println(pet.getPetName() + " |\t" + pet.getPetDescription() + "  |\t" + pet.getHungerLevel()
                     + " |\t" + pet.getThirstLevel() + "  |\t" + pet.getBoredomLevel());
         }
+
         // allows the user to house and care for a collection of pets.
         /*
          * include appropriate instance variable(s) to store the pets who reside at the
