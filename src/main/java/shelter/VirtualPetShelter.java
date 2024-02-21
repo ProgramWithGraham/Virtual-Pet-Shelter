@@ -29,7 +29,7 @@ public class VirtualPetShelter {
 
     public void findPet() {
         for (VirtualPet pet : pets) {
-            System.out.println(pet.getPetName() + pet.getPetDescription());
+            System.out.println(pet.getPetName() + " " + pet.getPetDescription());
         }
     }
 
@@ -40,11 +40,9 @@ public class VirtualPetShelter {
             String thisPet = petAtThisIndex.getPetName();
             if (thisPet.equals(petToRemove)) {
                 pets.remove(counter);
-                counter--;
             }
             counter++;
         }
-
     }
 
     public void feedAll() {
@@ -58,9 +56,12 @@ public class VirtualPetShelter {
     }
 
     public void playWithSelectedPet(String petName) {
-        if (petName.equals(petName)) {
-            // for (VirtualPet pet : pets)
-            // petName.playFetch();
+        int counter = 0;
+        while (counter < pets.size()) {
+            VirtualPet selectedPet = pets.get(0);
+            String thisSelectedPet = selectedPet.getPetName();
+            if (selectedPet.equals(petName))
+                pets.playFetch();
         }
     }
 

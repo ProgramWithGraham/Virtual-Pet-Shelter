@@ -56,13 +56,19 @@ public class VirtualPetShelterApp {
                 omgPets.findPet();
                 pet.nextLine();
                 System.out.println("\nPlease type the pet name from the above list that you want to adopt");
-                String chooseAPet = pet.nextLine();
-                omgPets.removePet(chooseAPet);
-                System.out.println("You have adopted " + chooseAPet + "\n");
+                String petToRemove = pet.nextLine();
+                System.out.println("You have adopted " + " " + petToRemove + "\n");
+                omgPets.removePet(petToRemove);
 
             } else if (userInput == 5) {
-
+                pet.nextLine();
+                System.out.println("\nWhat name do you want your new pet to have?");
+                String namingThePet = pet.nextLine();
+                System.out.println("What is your description of your pet in three words?");
+                String describeThePet = pet.nextLine();
                 System.out.println(" You have admitted a pet.");
+                VirtualPet superPet7 = new VirtualPet(namingThePet, describeThePet);
+                omgPets.addPets(superPet7);
                 System.out.println("");
 
             } else if (userInput == 6) {
