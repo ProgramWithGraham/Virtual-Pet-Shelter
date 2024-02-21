@@ -71,9 +71,6 @@ public class VirtualPetShelter {
         }
     }
 
-    int counter = 0;while(counter<orders.size())
-    {
-
     public void tickAllPets() {
         for (VirtualPet pet : pets)
             pet.tick();
@@ -85,6 +82,7 @@ public class VirtualPetShelter {
             System.out.println(pet.getPetName() + " |\t" + pet.getPetDescription() + "  |\t" + pet.getHungerLevel()
                     + " |\t" + pet.getThirstLevel() + "  |\t" + pet.getBoredomLevel());
         }
+
         // allows the user to house and care for a collection of pets.
         /*
          * include appropriate instance variable(s) to store the pets who reside at the
