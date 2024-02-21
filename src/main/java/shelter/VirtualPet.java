@@ -10,32 +10,40 @@ package shelter;
  include a constructor that, in addition to name and description, accepts default values for the pet's attributes (hunger, boredom, etc)
  Do not include a default (zero arguments) constructor.
  */
-public class VirtualPet extends VirtualPetShelter {
+public class VirtualPet {
     private String petName;
     private String petDescription;
     private int hungerLevel;
     private int thirstLevel;
-    private int boredomLevel;
+    public int boredomLevel;
+
+    /*
+     * parameterized constructor
+     * 
+     * @param petName the name
+     */
+    public VirtualPet(String petName, String petDescription) {
+        this.petName = petName;
+        this.petDescription = petDescription;
+        this.hungerLevel = 75;
+        this.thirstLevel = 75;
+        this.boredomLevel = 75;
+    }
 
     public VirtualPet(String petName, String petDescription, int hungerLevel, int thirstLevel, int boredomLevel) {
         this.petName = petName;
         this.petDescription = petDescription;
-        this.hungerLevel = 60;
-        this.thirstLevel = 60;
-        this.boredomLevel = 60;
-    }
-
-    public VirtualPet(String petName, String petDescription) {
-        this.petName = petName;
-        this.petDescription = petDescription;
+        this.hungerLevel = hungerLevel;
+        this.thirstLevel = thirstLevel;
+        this.boredomLevel = boredomLevel;
     }
 
     public void printUserInstructions() {
         System.out.println(" ");
-        System.out.println("Please enter a number input from the following options: ");
-        System.out.println(" 1. Give your pet some Food");
-        System.out.println(" 2. Give your pet some Water");
-        System.out.println(" 3. Play with your selected virtual pet");
+        System.out.println("Please enter a number input from the following options:");
+        System.out.println(" 1. Give your pets some Food");
+        System.out.println(" 2. Give your pets some Water");
+        System.out.println(" 3. Play with your a selected virtual pet");
         System.out.println(" 4. Adopt a pet");
         System.out.println(" 5. Admit a pet");
         System.out.println(" 6. End the program");
@@ -81,19 +89,19 @@ public class VirtualPet extends VirtualPetShelter {
         this.boredomLevel = boredomLevel;
     }
 
-    public void feed() {
-        this.hungerLevel -= 10;
+    public void giveFood() {
+        this.hungerLevel += 10;
     }
 
     public void giveWater() {
-        this.thirstLevel -= 10;
+        this.thirstLevel += 10;
     }
 
     public void playFetch() {
-        this.boredomLevel -= 10;
+        this.boredomLevel += 10;
     }
 
-    // @Override
+    @Override
     public String toString() {
         String petDetails = this.petName + ", " + this.petDescription + " - stats are:  " + "Hunger: "
                 + this.hungerLevel
@@ -103,9 +111,9 @@ public class VirtualPet extends VirtualPetShelter {
     }
 
     public void tick() {
-        this.hungerLevel += 2;
-        this.thirstLevel += 2;
-        this.boredomLevel += 2;
+        this.hungerLevel -= 2;
+        this.thirstLevel -= 2;
+        this.boredomLevel -= 2;
         // increase this calling objects thirst, hunger, boredom
     }
 

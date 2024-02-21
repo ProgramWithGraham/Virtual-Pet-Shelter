@@ -29,21 +29,32 @@ public class VirtualPetShelter {
 
     public void findPet() {
         for (VirtualPet pet : pets) {
-            System.out.println(pet.getPetName());
+            System.out.println(pet.getPetName() + pet.getPetDescription());
         }
     }
 
-    // public void feedALL() {
-    // VirtualPet hungr
-    // this.hungerLevel -= 10;
-    // }
+    public void feedAll() {
+        for (VirtualPet pet : pets)
+            pet.giveFood();
+    }
 
-    // public void giveAllWater() {
-    // this.thirstLevel -= 10;
-    // }
+    public void giveAllWater() {
+        for (VirtualPet pet : pets)
+            pet.giveWater();
+    }
+
+    public void playWithAPet(String petName) {
+        for (VirtualPet pet : pets)
+            pet.playFetch();
+    }
+
+    public void tickAllPets() {
+        for (VirtualPet pet : pets)
+            pet.tick();
+    }
 
     public void showPets() {
-        System.out.println("Name     | Description     | Hunger | Thirst | Boredom |");
+        System.out.println("Name\t|Hunger\t|Thirst\t|Boredom");
         for (VirtualPet pet : pets) {
             System.out.println(pet.getPetName() + " | " + pet.getPetDescription() + "   | " + pet.getHungerLevel()
                     + "    | " + pet.getThirstLevel() + "     |  " + pet.getBoredomLevel() + " |");
@@ -53,16 +64,16 @@ public class VirtualPetShelter {
          * include appropriate instance variable(s) to store the pets who reside at the
          * shelter
          * include methods that:
-         * return a Collection of all of the pets in the shelter
+         * done? return a Collection of all of the pets in the shelter
          * return a specific VirtualPet given its name
          * allow intake of a homeless pet (adding a pet to the shelter)
          * allow adoption of a homeless pet (removing a pet from the shelter)
-         * feed all of the pets in the shelter
-         * water all of the pets in the shelter
+         * DONEfeed all of the pets in the shelter
+         * DONE water all of the pets in the shelter
          * plays (or performs some other interaction(s)) with an individual pet in the
          * shelter
-         * include a tick method that calls the tick method for each of the pets in the
-         * shelter, updating their needs
+         * DONE include a tick method that calls the tick method for each of the pets in
+         * the shelter, updating their needs
          */
     }
 }
