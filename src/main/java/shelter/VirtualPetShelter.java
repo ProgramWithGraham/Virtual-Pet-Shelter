@@ -15,6 +15,10 @@ public class VirtualPetShelter {
 
     }
 
+    public Collection<VirtualPet> getAllPets() {
+        return pets;
+    }
+
     public ArrayList<VirtualPet> getPets() {
         return this.pets;
     }
@@ -40,6 +44,7 @@ public class VirtualPetShelter {
             String thisPet = petAtThisIndex.getPetName();
             if (thisPet.equals(petToRemove)) {
                 pets.remove(counter);
+                counter--;
             }
             counter++;
         }
@@ -56,6 +61,7 @@ public class VirtualPetShelter {
     }
 
     public void playWithSelectedPet(String petName) {
+        pets.get(petName).playFetch();
         int counter = 0;
         while (counter < pets.size()) {
             VirtualPet selectedPet = pets.get(0);
@@ -64,6 +70,9 @@ public class VirtualPetShelter {
                 pets.playFetch();
         }
     }
+
+    int counter = 0;while(counter<orders.size())
+    {
 
     public void tickAllPets() {
         for (VirtualPet pet : pets)
