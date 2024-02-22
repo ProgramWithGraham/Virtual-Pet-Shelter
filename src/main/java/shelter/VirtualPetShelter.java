@@ -77,10 +77,10 @@ public class VirtualPetShelter {
     }
 
     public void showPets() {
-        System.out.println("Name\t | Description         | Hunger    | Thirst | Boredom ");
+        System.out.println("Name  | Description      | Hunger    | Thirst | Boredom ");
         for (VirtualPet pet : pets) {
-            System.out.println(pet.getPetName() + " |\t" + pet.getPetDescription() + "  |\t" + pet.getHungerLevel()
-                    + " |\t" + pet.getThirstLevel() + "  |\t" + pet.getBoredomLevel());
+            System.out.println(pet.getPetName() + " | " + pet.getPetDescription() + "  |\t" + pet.getHungerLevel()
+                    + "   |\t" + pet.getThirstLevel() + "    |\t" + pet.getBoredomLevel());
         }
 
         // allows the user to house and care for a collection of pets.

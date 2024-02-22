@@ -24,8 +24,8 @@ public class VirtualPetShelterApp {
         VirtualPet superPet6 = new VirtualPet("Trini", "Yellow Power dog");
 
         VirtualPetShelter omgPets = new VirtualPetShelter();
-        omgPets.addPets(superPet); // possibly nested if
-        omgPets.addPets(superPet2); // possibly nested if
+        omgPets.addPets(superPet);
+        omgPets.addPets(superPet2);
         omgPets.addPets(superPet3);
         omgPets.addPets(superPet4);
         omgPets.addPets(superPet5);
