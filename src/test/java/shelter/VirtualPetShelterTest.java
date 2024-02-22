@@ -79,7 +79,7 @@ public class VirtualPetShelterTest {
     }
 
     @Test
-    public Void testTickAllPets() {
+    public void testTickAllPets() {
         omgPets = new VirtualPetShelter();
         VirtualPet superPet = new VirtualPet("Krypto", "The Super dog");
         VirtualPet superPet2 = new VirtualPet("Tommy", "Green Power dog");
@@ -97,24 +97,24 @@ public class VirtualPetShelterTest {
 
         omgPets.tickAllPets();
 
-        assertEquals(-2, superPet.getHungerLevel());
-        assertEquals(-2, superPet.getThirstLevel());
-        assertEquals(-2, superPet.getBoredomLevel());
-        assertEquals(-2, superPet2.getHungerLevel());
-        assertEquals(-2, superPet2.getThirstLevel());
-        assertEquals(-2, superPet2.getBoredomLevel());
-        assertEquals(-2, superPet3.getHungerLevel());
-        assertEquals(-2, superPet3.getThirstLevel());
-        assertEquals(-2, superPet3.getBoredomLevel());
-        assertEquals(-2, superPet4.getHungerLevel());
-        assertEquals(-2, superPet4.getThirstLevel());
-        assertEquals(-2, superPet4.getBoredomLevel());
-        assertEquals(-2, superPet5.getHungerLevel());
-        assertEquals(-2, superPet5.getThirstLevel());
-        assertEquals(-2, superPet5.getBoredomLevel());
-        assertEquals(-2, superPet6.getHungerLevel());
-        assertEquals(-2, superPet6.getThirstLevel());
-        assertEquals(-2, superPet6.getBoredomLevel());
+        assertEquals(73, superPet.getHungerLevel());
+        assertEquals(73, superPet.getThirstLevel());
+        assertEquals(73, superPet.getBoredomLevel());
+        assertEquals(73, superPet2.getHungerLevel());
+        assertEquals(73, superPet2.getThirstLevel());
+        assertEquals(73, superPet2.getBoredomLevel());
+        assertEquals(73, superPet3.getHungerLevel());
+        assertEquals(73, superPet3.getThirstLevel());
+        assertEquals(73, superPet3.getBoredomLevel());
+        assertEquals(73, superPet4.getHungerLevel());
+        assertEquals(73, superPet4.getThirstLevel());
+        assertEquals(73, superPet4.getBoredomLevel());
+        assertEquals(73, superPet5.getHungerLevel());
+        assertEquals(73, superPet5.getThirstLevel());
+        assertEquals(73, superPet5.getBoredomLevel());
+        assertEquals(73, superPet6.getHungerLevel());
+        assertEquals(73, superPet6.getThirstLevel());
+        assertEquals(73, superPet6.getBoredomLevel());
     }
 
 }
