@@ -17,11 +17,6 @@ public class VirtualPet {
     private int thirstLevel;
     public int boredomLevel;
 
-    /*
-     * parameterized constructor
-     * 
-     * @param petName the name
-     */
     public VirtualPet(String petName, String petDescription) {
         this.petName = petName;
         this.petDescription = petDescription;
@@ -89,8 +84,9 @@ public class VirtualPet {
         this.boredomLevel = boredomLevel;
     }
 
-    public void giveFood() {
+    public int giveFood() {
         this.hungerLevel += 10;
+        return this.hungerLevel;
     }
 
     public void giveWater() {
