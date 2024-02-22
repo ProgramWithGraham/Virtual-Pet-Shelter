@@ -2,36 +2,26 @@ package shelter;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class VirtualPetTest {
 
-    // @BeforeEach
-    // public void setup() {
-    // // VirtualPet superPet = new VirtualPet(null, null, 0, 0, 0);
-
-    // }
-
     @Test
     public void testGiveFood() {
         VirtualPet superPet = new VirtualPet(null, null, 0, 0, 0);
-        // int food = superPet.getHungerLevel();
         assertEquals(10, superPet.giveFood());
     }
 
     @Test
     public void testGiveWater() {
         VirtualPet superPet = new VirtualPet(null, null, 0, 0, 0);
-        int food = superPet.getHungerLevel();
-        assertEquals(10, food);
+        assertEquals(10, superPet.giveWater());
     }
 
     @Test
     public void testPlayFetch() {
         VirtualPet superPet = new VirtualPet(null, null, 0, 0, 0);
-        int food = superPet.getHungerLevel();
-        assertEquals(10, food);
+        assertEquals(10, superPet.playFetch());
     }
 
     @Test

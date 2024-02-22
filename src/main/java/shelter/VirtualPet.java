@@ -89,12 +89,14 @@ public class VirtualPet {
         return this.hungerLevel;
     }
 
-    public void giveWater() {
+    public int giveWater() {
         this.thirstLevel += 10;
+        return this.thirstLevel;
     }
 
-    public void playFetch() {
+    public int playFetch() {
         this.boredomLevel += 10;
+        return this.boredomLevel;
     }
 
     @Override
