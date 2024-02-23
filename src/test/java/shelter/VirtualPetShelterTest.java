@@ -18,13 +18,6 @@ public class VirtualPetShelterTest {
     }
 
     @Test
-    public void testRemovePet() {
-
-        omgPets.removePet("Trini");
-
-    }
-
-    @Test
     public void testFeedAll() {
 
         omgPets.feedAll();

@@ -52,7 +52,7 @@ public class VirtualPetShelterApp {
                 omgPets.playWithSelectedPet(chooseAPet);
                 System.out.println("\nYou have played with " + chooseAPet + "\n");
 
-            } else if (userInput == 4) {
+            } else if (userInput == 4) { // This is to remove a pet from the shelter
                 omgPets.findPet();
                 pet.nextLine();
                 System.out.println("\nPlease type the pet name from the above list that you want to adopt");
@@ -60,7 +60,7 @@ public class VirtualPetShelterApp {
                 System.out.println("You have adopted " + " " + petToRemove + "\n");
                 omgPets.removePet(petToRemove);
 
-            } else if (userInput == 5) {
+            } else if (userInput == 5) { // This is to add a new pet per user's choice pet name and description
                 pet.nextLine();
                 System.out.println("\nWhat name do you want your new pet to have?");
                 String namingThePet = pet.nextLine();
@@ -71,7 +71,7 @@ public class VirtualPetShelterApp {
                 omgPets.addPets(superPet7);
                 System.out.println("");
 
-            } else if (userInput == 6) {
+            } else if (userInput == 6) { // End the program
                 System.out.println("");
                 System.out.println(" Baby Come Back, I just can't live without you!\n");
                 System.out.println("");
