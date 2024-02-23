@@ -11,18 +11,14 @@ public class VirtualPetShelterTest {
     @BeforeEach
     public void setup() {
         omgPets = new VirtualPetShelter();
-
         VirtualPet superPet = new VirtualPet("Krypto", "The Super dog");
-
-        omgPets.addPets(superPet);
+        omgPets.addPet(superPet);
     }
 
     @Test
     public void testFeedAll() {
-
         omgPets.feedAll();
         assertEquals(85, omgPets.getPets().get(0).getHungerLevel());
-
     }
 
     @Test
@@ -34,7 +30,6 @@ public class VirtualPetShelterTest {
     @Test
     public void testTickAllPets() {
         omgPets.tickAllPets();
-
         assertEquals(73, omgPets.getPets().get(0).getHungerLevel());
         assertEquals(73, omgPets.getPets().get(0).getThirstLevel());
         assertEquals(73, omgPets.getPets().get(0).getBoredomLevel());
