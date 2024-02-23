@@ -6,17 +6,12 @@ public class VirtualPetShelter {
 
     ArrayList<VirtualPet> pets = new ArrayList<VirtualPet>();
 
-    // public VirtualPetShelter(String petName, String petDescription, int
-    // hungerLevel, int thirstLevel,
-    // int boredomLevel) {
-    // super(petName, petDescription, hungerLevel, thirstLevel, boredomLevel);
-    // }
     public VirtualPetShelter() {
 
     }
 
     public Collection<VirtualPet> getAllPets() {
-        return pets;
+        return this.pets;
     }
 
     public ArrayList<VirtualPet> getPets() {
@@ -29,25 +24,6 @@ public class VirtualPetShelter {
 
     public void addPets(VirtualPet addedPets) {
         this.pets.add(addedPets);
-    }
-
-    public void findPet() {
-        for (VirtualPet pet : pets) {
-            System.out.println(pet.getPetName() + " " + pet.getPetDescription());
-        }
-    }
-
-    public void removePet(String petToRemove) {
-        int counter = 0;
-        while (counter < pets.size()) {
-            VirtualPet petAtThisIndex = pets.get(counter);
-            String thisPet = petAtThisIndex.getPetName();
-            if (thisPet.equals(petToRemove)) {
-                pets.remove(counter);
-                counter--;
-            }
-            counter++;
-        }
     }
 
     public void feedAll() {
@@ -65,8 +41,27 @@ public class VirtualPetShelter {
         while (counter < pets.size()) {
             VirtualPet selectedPet = pets.get(counter);
             String thisSelectedPet = selectedPet.getPetName();
-            if (thisSelectedPet.equals(petName))
+            if (thisSelectedPet.equalsIgnoreCase(petName))
                 selectedPet.playFetch();
+            counter++;
+        }
+    }
+
+    public void findPet() {
+        for (VirtualPet pet : pets) {
+            System.out.println(pet.getPetName() + " " + pet.getPetDescription());
+        }
+    }
+
+    public void removePet(String petToRemove) {
+        int counter = 0;
+        while (counter < pets.size()) {
+            VirtualPet petAtThisIndex = pets.get(counter);
+            String thisPet = petAtThisIndex.getPetName();
+            if (thisPet.equalsIgnoreCase(petToRemove)) {
+                pets.remove(counter);
+                counter--;
+            }
             counter++;
         }
     }

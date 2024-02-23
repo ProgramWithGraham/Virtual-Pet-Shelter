@@ -1,7 +1,6 @@
 package shelter;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +21,7 @@ public class VirtualPetShelterTest {
     public void testRemovePet() {
 
         omgPets.removePet("Trini");
-assume
+
     }
 
     @Test

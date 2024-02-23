@@ -102,9 +102,7 @@ public class VirtualPet {
     @Override
     public String toString() {
         String petDetails = this.petName + ", " + this.petDescription + " - stats are:  " + "Hunger: "
-                + this.hungerLevel
-                + "  Thirst: "
-                + this.thirstLevel + "  Boredom: " + this.boredomLevel;
+                + this.hungerLevel + "  Thirst: " + this.thirstLevel + "  Boredom: " + this.boredomLevel;
         return petDetails;
     }
 
