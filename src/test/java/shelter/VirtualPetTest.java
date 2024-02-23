@@ -40,7 +40,6 @@ public class VirtualPetTest {
     public void testTick() {
         VirtualPet superPet = new VirtualPet(null, null, 0, 0, 0);
         superPet.tick();
-
         assertEquals(-2, superPet.getHungerLevel());
         assertEquals(-2, superPet.getThirstLevel());
         assertEquals(-2, superPet.getBoredomLevel());
