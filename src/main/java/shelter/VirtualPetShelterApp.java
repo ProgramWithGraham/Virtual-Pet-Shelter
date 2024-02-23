@@ -36,15 +36,15 @@ public class VirtualPetShelterApp {
         while (true) {
             int userInput = pet.nextInt();
 
-            if (userInput == 1) { // This is used to increase the Hunger level
+            if (userInput == 1) { // This is used to increase the Hunger level for all pets
                 omgPets.feedAll();
-                System.out.println("\nYou have given your pets some food.\n");
+                System.out.println("\nYou have given all pets some food.\n");
 
-            } else if (userInput == 2) { // This is used to increase the Thirst level
+            } else if (userInput == 2) { // This is used to increase the Thirst level for all pets
                 omgPets.giveAllWater();
-                System.out.println("\nYou have given your pets some water.\n");
+                System.out.println("\nYou have given all pets some water.\n");
 
-            } else if (userInput == 3) { // This is used to increase the boredom level
+            } else if (userInput == 3) { // This is used to increase the boredom level for only the selected pet
                 omgPets.findPet();
                 pet.nextLine();
                 System.out.println("\nPlease type the pet name from the above list that you want to play with");
@@ -84,7 +84,7 @@ public class VirtualPetShelterApp {
                 System.out.println("           :                                      |");
                 System.out.println("            \\                                     |");
                 System.out.println("            |                               /      \\");
-                System.out.println("             \\  \\_         :         \\     /~~~\\    |");
+                System.out.println("             \\  \\_         :         \\     /~~~\\|");
                 System.out.println("             /   :~~~~~|   :~~~~~~~~~~|   :     :   :");
                 System.out.println("            /    :    /    :         /    :    /    :");
                 System.out.println("        (~~~     )(~~~     )     (~~~     )(~~~     )");
